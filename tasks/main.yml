@@ -1,0 +1,16 @@
+---
+- apt_key:
+    url: "https://download.owncloud.org/download/repositories/stable/{{ ansible_os_family }}_{{ ansible_distribution_version }}.0/Release.key"
+    state: present
+
+- apt_repository:
+    repo: "deb https://download.owncloud.org/download/repositories/stable/{{ ansible_os_family }}_{{ ansible_distribution_version }}.0/ /"
+    state: present
+
+- apt:
+    name: "{{ item }}"
+    update_cache: yes
+    cache_valid_time: 86400
+  with_items:
+    - owncloud-files
+    - smbclient
