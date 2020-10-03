@@ -1,4 +1,4 @@
-Role Name
+DEPRECATED. Please check the new nextcloud role https://github.com/swcc/ansible-nextcloud
 =========
 
 [![Build Status](https://travis-ci.org/swcc/ansible-owncloud-role.svg?branch=master)](https://travis-ci.org/swcc/ansible-owncloud-role)
